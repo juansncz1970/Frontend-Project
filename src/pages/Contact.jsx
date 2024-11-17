@@ -1,12 +1,24 @@
 import React from 'react';
-import NavLinks from '../NavLinks';
 
 function Contact() {
   return (
-    <div>
-      <h1>Contact Me</h1>
-      <p>You can reach me via email at john.francis@example.com or on my Instagram account @SunAndcheese.</p>
-      <NavLinks />
+    <div id="contact" className="section contact-section">
+      <div className="image-container">
+        <img src="contact.jpg" alt="Contact" className="profile-image" />
+      </div>
+      <div className="content-container">
+        <h1>Contact Me</h1>
+        <p>
+          Feel free to reach out to me for any inquiries, collaborations, or just to say hello! You can
+          contact me through the following methods:
+        </p>
+        <ul>
+          <li>Email: example@domain.com</li>
+          <li>Phone: +123 456 7890</li>
+          <li>LinkedIn: linkedin.com/in/your-profile</li>
+        </ul>
+        <button className="cta-button">Learn More →</button>
+      </div>
     </div>
   );
 }

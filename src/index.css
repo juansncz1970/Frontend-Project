@@ -1,3 +1,4 @@
+/* For shared styles on all pages */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -5,19 +6,10 @@
 
 h1 {
   font-size: 2.5rem;
-  color: #333;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #555;
+  color: #003049; /* Dark Blue */
 }
 
 p {
   color: #666;
   font-size: 1.1rem;
-}
-
-button {
-  margin: 0 5px;
 }
