@@ -1,12 +1,14 @@
 import React from 'react';
+import NavLinks from '../NavLinks';
 
-const Contact = () => {
+function Contact() {
   return (
-    <div className="container mt-5">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, feel free to reach out via my social media accounts or email.</p>
+    <div>
+      <h1>Contact Me</h1>
+      <p>You can reach me via email at john.francis@example.com or on my Instagram account @SunAndcheese.</p>
+      <NavLinks />
     </div>
   );
-};
+}
 
 export default Contact;

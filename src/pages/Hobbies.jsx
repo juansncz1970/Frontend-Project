@@ -1,12 +1,14 @@
 import React from 'react';
+import NavLinks from '../NavLinks';
 
-const Hobbies = () => {
+function Hobbies() {
   return (
-    <div className="container mt-5">
-      <h2>Hobbies</h2>
-      <p>In my free time, I enjoy playing video games, listening to music, and exploring new technologies.</p>
+    <div>
+      <h1>My Hobbies</h1>
+      <p>I enjoy listening to music, playing games, and exploring new technology. Some of my favorite artists include Hozier and Paramore.</p>
+      <NavLinks />
     </div>
   );
-};
+}
 
 export default Hobbies;

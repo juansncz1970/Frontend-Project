@@ -1,16 +1,23 @@
-button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #242424;
-  color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: background-color 0.3s, color 0.3s;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-button:hover {
-  background-color: #646cff;
-  color: #ffffff;
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #555;
+}
+
+p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+button {
+  margin: 0 5px;
 }

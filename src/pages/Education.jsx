@@ -1,12 +1,14 @@
 import React from 'react';
+import NavLinks from '../NavLinks';
 
-const Education = () => {
+function Education() {
   return (
-    <div className="container mt-5">
-      <h2>Education</h2>
-      <p>I am currently studying at the College of Computer Science, where I am focusing on web development and backend technologies.</p>
+    <div>
+      <h1>My Education</h1>
+      <p>I am currently studying Computer Science. I am learning various programming languages and frameworks.</p>
+      <NavLinks />
     </div>
   );
-};
+}
 
 export default Education;
