@@ -14,8 +14,9 @@ function Contact() {
 
         {/* Content Sections */}
         <div className="custom-card">
+         <h2>I’d love to hear from you!</h2>
           <p>
-            I’d love to hear from you! Whether you want to collaborate on a creative project, discuss tech ideas, 
+            Whether you want to collaborate on a creative project, discuss tech ideas, 
             or just share music recommendations, feel free to reach out. Let’s connect and explore ways to create 
             something awesome together!
           </p>

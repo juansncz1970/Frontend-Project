@@ -266,6 +266,10 @@ footer a:hover {
     font-size: 2rem;
   }
 
+  .content-container h2 {
+    font-size: 1.3rem;
+  }
+
   .content-container p {
     font-size: 0.8rem;
     margin-top: 15px;
