@@ -1,4 +1,4 @@
-/* General Reset and Body Styling */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Section Layout and Flexbox Styling */
+/* Section Layout */
 .section {
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@ body {
   width: 100%;
 }
 
-.section .image-container {
+.image-container {
   flex: 1;
   max-width: 50%;
 }
@@ -33,11 +33,12 @@ body {
   border-radius: 10px;
 }
 
+/* Content Styling */
 .content-container {
   flex: 1;
   padding-left: 40px;
   text-align: left;
-  max-width: 500px; /* Limit the width of the content */
+  max-width: 500px;
 }
 
 .content-container h1 {
@@ -48,7 +49,6 @@ body {
 }
 
 .content-container p {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   color: #eae2b7;
   margin-bottom: 30px;
@@ -64,7 +64,6 @@ body {
   transition: 0.3s ease;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
-  display: inline-block;
 }
 
 .cta-button:hover {
@@ -72,66 +71,27 @@ body {
   border-color: #f77f00;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .content-container {
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .image-container {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-
-  .profile-image {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .content-container h1 {
-    font-size: 2rem;
-  }
-
-  .content-container p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 10px 25px;
-  }
-
-  /* Make buttons stack on small screens */
-  .nav-buttons-container {
-    flex-direction: column;
-    align-items: center;
-    position: static; /* Fix buttons below the "Learn More" */
-  }
-
-  .nav-button {
-    margin-bottom: 10px;
-  }
-}
-
-/* Navigation Styling */
+/* Navigation Buttons */
 .nav-buttons-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Arrange buttons in a linear row */
   gap: 15px;
   z-index: 1000;
   align-items: center;
   position: fixed;
-  bottom: 20px; /* Place it at the bottom */
+  top: 20px; /* Move to the top */
   right: 20px; /* Align to the right */
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.nav-buttons-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-buttons-container.visible {
+  opacity: 1;
 }
 
 .nav-button {
@@ -172,4 +132,52 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-container {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .profile-image {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .content-container h1 {
+    font-size: 2rem;
+  }
+
+  .content-container p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+  }
+
+  .nav-buttons-container {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: center;
+    top: 10px; /* Adjust top margin on smaller screens */
+    right: 10px; /* Adjust right margin on smaller screens */
+  }
+  
+  .nav-button {
+    margin-bottom: 10px;
+  }
 }
