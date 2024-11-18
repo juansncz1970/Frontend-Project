@@ -4,7 +4,7 @@ function Hobbies() {
   return (
     <div id="hobbies" className="section hobbies-section">
       <div className="image-container">
-        <img src="hobby.jpg" alt="Hobbies" className="profile-image" />
+        <img src="hobby.png" alt="Hobbies" className="profile-image" />
       </div>
       <div className="content-container">
         <h1>Hobbies</h1>

@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div id="contact" className="section contact-section">
       <div className="image-container">
-        <img src="contact.jpg" alt="Contact me" className="profile-image" />
+        <img src="contact.png" alt="Contact me" className="profile-image" />
       </div>
       <div className="content-container">
         <h1>Contact Me</h1>

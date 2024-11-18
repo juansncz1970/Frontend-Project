@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #003049;
-  color: #eae2b7;
+  background-color: #121212;  /* Dark mode background */
+  color: #e4e4e4;  /* Lighter text for readability */
   line-height: 1.6;
 }
 
@@ -50,7 +50,7 @@ body {
 
 .content-container p {
   font-size: 1.2rem;
-  color: #eae2b7;
+  color: #e4e4e4;  /* Slightly lighter text for description */
   margin-bottom: 30px;
 }
 
@@ -67,31 +67,20 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #f77f00;
-  border-color: #f77f00;
+  background-color: #ff5733;  /* Minimal orange accent for hover */
+  border-color: #ff5733;
 }
 
-/* Navigation Buttons */
-.nav-buttons-container {
-  display: flex;
-  flex-direction: row; /* Arrange buttons in a linear row */
-  gap: 15px;
-  z-index: 1000;
-  align-items: center;
-  position: fixed;
-  top: 20px; /* Move to the top */
-  right: 20px; /* Align to the right */
-  transition: opacity 0.3s ease;
-  opacity: 1;
-}
-
-.nav-buttons-container.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.nav-buttons-container.visible {
-  opacity: 1;
+  /* Navigation Buttons */
+  .nav-buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    z-index: 1000;
+    align-items: center;
+    position: fixed;
+    top: 70px; /* Increased the top value to move the buttons further down */
+    right: 20px;
 }
 
 .nav-button {
@@ -111,21 +100,62 @@ body {
 }
 
 .nav-button:hover {
-  background-color: #f77f00;
-  border-color: #f77f00;
+  background-color: #8803b8;  /* Accent on hover */
+  border-color: #8803b8;
 }
 
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  color: #e4e4e4;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #252424;  /* Dark background for sidebar */
+  color: #121212;  /* Lighter text for readability */
+  overflow-x: hidden;
+  transform: translateX(100%); /* Sidebar hidden by default */
+  transition: transform 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center the navigation buttons */
+  z-index: 1000;
+}
+
+.sidebar.active {
+  transform: translateX(0); /* Sidebar becomes visible */
+}
+
+.sidebar .nav-button {
+  margin: 15px 0;
+  color: #f9f8f7;  /* Accent color for sidebar items */
+  text-decoration: none;
+  text-align: center;  /* Ensures the text is centered */
+}
 /* Footer Styling */
 footer {
-  background-color: #003049;
-  color: #eae2b7;
+  background-color: #121212;  /* Dark background for footer */
+  color: #e4e4e4;  /* Light text for footer */
   text-align: center;
   padding: 20px 0;
   font-size: 1rem;
 }
 
 footer a {
-  color: #f77f00;
+  color: #8803b8;  /* Accent color for links */
   text-decoration: none;
   font-weight: bold;
 }
@@ -136,6 +166,14 @@ footer a:hover {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .hamburger-icon {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .nav-buttons-container {
+    display: none; /* Hide the top navigation on mobile */
+  }
+
   .section {
     flex-direction: column;
     text-align: center;
@@ -169,15 +207,24 @@ footer a:hover {
   .cta-button {
     padding: 10px 25px;
   }
+}
+
+/* Desktop Version - Sidebar collapse functionality */
+@media (min-width: 769px) {
+  .hamburger-icon {
+    display: block; /* Show hamburger icon on desktop */
+  }
+
+  .sidebar {
+    transform: translateX(0); /* Sidebar is always visible on desktop */
+  }
 
   .nav-buttons-container {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
-    align-items: center;
-    top: 10px; /* Adjust top margin on smaller screens */
-    right: 10px; /* Adjust right margin on smaller screens */
+    display: none; /* Hide the top navigation on desktop */
   }
-  
-  .nav-button {
-    margin-bottom: 10px;
+
+  /* Sidebar Collapse on Desktop */
+  .sidebar.collapsed {
+    transform: translateX(100%); /* Sidebar hides */
   }
 }

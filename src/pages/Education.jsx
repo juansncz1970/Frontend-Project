@@ -4,7 +4,7 @@ function Education() {
   return (
     <div id="education" className="section education-section">
       <div className="image-container">
-        <img src="education.jpg" alt="Education" className="profile-image" />
+        <img src="education.png" alt="Education" className="profile-image" />
       </div>
       <div className="content-container">
         <h1>Education</h1>
