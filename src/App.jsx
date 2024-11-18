@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import './styles/App.css';
 
 import Home from './pages/Home';
@@ -12,13 +12,13 @@ function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen); // Toggle the sidebar open/close state
+    setSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <Router>
       <div className="App">
-        {/* Hamburger Icon for mobile view */}
+        {/* Hamburger Icon for mobile version */}
         <div className="hamburger-icon" onClick={toggleSidebar}>
           ☰
         </div>
@@ -26,38 +26,19 @@ function App() {
         {/* Collapsible Sidebar */}
         <div className={`sidebar ${isSidebarOpen ? 'active' : 'collapsed'}`}>
           <button className="nav-button" onClick={toggleSidebar}>
-            <Link to="/" onClick={toggleSidebar}>Home</Link>
+            <NavLink to="/" exact activeClassName="active" onClick={toggleSidebar}>Home</NavLink>
           </button>
           <button className="nav-button" onClick={toggleSidebar}>
-            <Link to="/about" onClick={toggleSidebar}>About</Link>
+            <NavLink to="/about" activeClassName="active" onClick={toggleSidebar}>About</NavLink>
           </button>
           <button className="nav-button" onClick={toggleSidebar}>
-            <Link to="/education" onClick={toggleSidebar}>Education</Link>
+            <NavLink to="/education" activeClassName="active" onClick={toggleSidebar}>Education</NavLink>
           </button>
           <button className="nav-button" onClick={toggleSidebar}>
-            <Link to="/hobbies" onClick={toggleSidebar}>Hobbies</Link>
+            <NavLink to="/hobbies" activeClassName="active" onClick={toggleSidebar}>Hobbies</NavLink>
           </button>
           <button className="nav-button" onClick={toggleSidebar}>
-            <Link to="/contact" onClick={toggleSidebar}>Contact</Link>
-          </button>
-        </div>
-
-        {/* Always Visible Navigation for Desktop */}
-        <div className={`nav-buttons-container ${isSidebarOpen ? 'collapsed' : ''}`}>
-          <button className="nav-button">
-            <Link to="/" onClick={toggleSidebar}>Home</Link>
-          </button>
-          <button className="nav-button">
-            <Link to="/about" onClick={toggleSidebar}>About</Link>
-          </button>
-          <button className="nav-button">
-            <Link to="/education" onClick={toggleSidebar}>Education</Link>
-          </button>
-          <button className="nav-button">
-            <Link to="/hobbies" onClick={toggleSidebar}>Hobbies</Link>
-          </button>
-          <button className="nav-button">
-            <Link to="/contact" onClick={toggleSidebar}>Contact</Link>
+            <NavLink to="/contact" activeClassName="active" onClick={toggleSidebar}>Contact</NavLink>
           </button>
         </div>
 
