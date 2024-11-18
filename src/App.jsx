@@ -25,32 +25,41 @@ function App() {
 
         {/* Collapsible Sidebar */}
         <div className={`sidebar ${isSidebarOpen ? 'active' : 'collapsed'}`}>
-          <button className="nav-button" onClick={toggleSidebar}>
-            <NavLink to="/" exact activeClassName="active" onClick={toggleSidebar}>Home</NavLink>
-          </button>
-          <button className="nav-button" onClick={toggleSidebar}>
-            <NavLink to="/about" activeClassName="active" onClick={toggleSidebar}>About</NavLink>
-          </button>
-          <button className="nav-button" onClick={toggleSidebar}>
-            <NavLink to="/education" activeClassName="active" onClick={toggleSidebar}>Education</NavLink>
-          </button>
-          <button className="nav-button" onClick={toggleSidebar}>
-            <NavLink to="/hobbies" activeClassName="active" onClick={toggleSidebar}>Hobbies</NavLink>
-          </button>
-          <button className="nav-button" onClick={toggleSidebar}>
-            <NavLink to="/contact" activeClassName="active" onClick={toggleSidebar}>Contact</NavLink>
-          </button>
+          <a className="nav-button" href="#home" onClick={toggleSidebar}>
+            Home
+          </a>
+          <a className="nav-button" href="#about" onClick={toggleSidebar}>
+            About
+          </a>
+          <a className="nav-button" href="#education" onClick={toggleSidebar}>
+            Education
+          </a>
+          <a className="nav-button" href="#hobbies" onClick={toggleSidebar}>
+            Hobbies
+          </a>
+          <a className="nav-button" href="#contact" onClick={toggleSidebar}>
+            Contact
+          </a>
         </div>
 
         {/* Page Content */}
         <div className="page-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/hobbies" element={<Hobbies />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          {/* Sections of the page */}
+          <div id="home">
+            <Home />
+          </div>
+          <div id="about">
+            <About />
+          </div>
+          <div id="education">
+            <Education />
+          </div>
+          <div id="hobbies">
+            <Hobbies />
+          </div>
+          <div id="contact">
+            <Contact />
+          </div>
         </div>
       </div>
     </Router>

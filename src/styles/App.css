@@ -5,11 +5,25 @@
   box-sizing: border-box;
 }
 
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensures each section takes full screen height */
+.section {
+  min-height: 100vh; /* Ensure each section fills the viewport */
+  padding: 80px 20px;
+  width: 100%;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #121212;
   color: #e4e4e4;
   line-height: 1.6;
+  scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
 }
 
 /* Section Layout */
@@ -20,6 +34,7 @@ body {
   padding: 80px 20px;
   width: 100%;
   flex-direction: row;
+  min-height: 100vh; /* Ensure each section takes full viewport height */
 }
 
 .image-container {
@@ -40,10 +55,6 @@ body {
   object-fit: cover; /* Maintain aspect ratio */
   border-radius: 0 !important; /* Force removal of border-radius */
 }
-
-
-
-
 
 /* Content Styling */
 .content-container {
@@ -235,8 +246,9 @@ footer a:hover {
 
   .content-container {
     padding-left: 0;
-    text-align: center;
-    margin-top: 20px;
+    text-align: left; /* Align text to the left */
+    margin-top: 15px;
+    margin-left: 15px; /* Add margin to the left */
   }
 
   .image-container {
@@ -255,7 +267,7 @@ footer a:hover {
   }
 
   .content-container p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .cta-button {
