@@ -22,12 +22,12 @@ function Contact() {
           <p>
             You can reach me through the following methods:
           </p>
-          <ul>
-            <li><strong>Email:</strong> yourname@example.com</li>
-            <li><strong>Phone:</strong> +123 456 7890</li>
-            <li><strong>LinkedIn:</strong> linkedin.com/in/your-profile</li>
-            <li><strong>GitHub:</strong> github.com/your-profile</li>
-          </ul>
+          
+            <p><strong>Email:</strong> yourname@example.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/your-profile</p>
+            <p><strong>GitHub:</strong> github.com/your-profile</p>
+          
           <p>
             
           </p>
